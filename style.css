@@ -1,0 +1,65 @@
+/*  class= hero secton for upper portion */
+/* class= navbar for left side icon (get app)*/
+/* class=link for right side icons*/
+/* class=user_icon for icons in our page*/ 
+/*https://fontawesome.com
+  https://cdnjs.com/libaries/font-awesome
+  https://font.google.com/specimen/Poppins#styles
+*/
+
+/* this are the default thing which we aadd while creating any page(UNIVERSAL SELECTOR)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero__section {
+    background: url('./images/heroSectionBackground.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 60vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* spaces between the lefy tags and the right tags 1 icon to the left other 4 to the right*/
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__menu_container{
+    /*to style content present on the right*/
+    display: flex;
+    gap: 18px;
+}
+
+.navbar__menu_container .user-icon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 100%;
+    border: solid 1px white;
+    display: none;
+}
+    /* when screen size between 0-600 its for small screen/mobiles*/
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .user-icon{
+        display: flex;
+    }
+    .linl{
+        display: none;
+    }.hero__section{
+        min-height: 80vh;
+    }
+}
